@@ -47,12 +47,12 @@ export default class App extends React.Component {
                         resizeMode={"contain"}
                         source={require("./assets/react-logo.png")}
                     />
-                    <Text style={styles.appTitle}>Welcome to React Native Web</Text>
+                    <Text style={styles.appTitle}>Welcome to Travis' Expo Publish</Text>
                     <Text style={styles.appSubtitle}>Typescript Edition</Text>
                 </View>
                 <View style={{ alignItems: "center", flex: 3 }}>
                     <Text style={styles.appIntro}>
-                        To get started, run "yarn watch", then edit src/App.tsx and save to reload.
+                        This means that using travis to publish on expo worked.
                     </Text>
                 </View>
             </View>
