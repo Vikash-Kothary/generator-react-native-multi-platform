@@ -2,6 +2,7 @@ ROOT=react-native-multi-platform
 
 install:
 	cd $(ROOT) && npm install 
+	cd $(ROOT) && npm install -g expo-cli
 
 build:
 	cd $(ROOT) && npm run build-ts
