@@ -9,6 +9,10 @@ build:
 run-android:
 	cd $(ROOT) && npm run android
 
+tests:
+	cd $(ROOT) && npm ci
+	cd $(ROOT) && npx jest --ci
+
 publish-expo:
 	cd $(ROOT) && npm ci
 	cd $(ROOT) && npx expo login -u $(EXPO_USERNAME) -p $(EXPO_PASSWORD)
