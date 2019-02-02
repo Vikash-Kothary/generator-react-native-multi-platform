@@ -19,3 +19,6 @@ publish-expo:
 	cd $(ROOT) && npm ci
 	cd $(ROOT) && npx expo login -u $(EXPO_USERNAME) -p $(EXPO_PASSWORD)
 	cd $(ROOT) && npx expo publish --non-interactive
+
+run-web:
+	docker-compose run web bash

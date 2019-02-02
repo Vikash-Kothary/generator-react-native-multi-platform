@@ -1,0 +1,18 @@
+version: '3'
+services:
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./react-native-multi-platform:/web
+    working_dir: /web
+    environment:
+      NODE_ENV: development
+    stdin_open: true
+    tty: true
+    #command: apk add --no-cache bash && bash
+    command: bash
