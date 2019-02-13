@@ -29,4 +29,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: react-native-multi-platform/build
   on:
-    branch: feature/#3-gh-pages
+    branch: feature/#3-publish-web
