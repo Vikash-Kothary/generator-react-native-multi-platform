@@ -6,6 +6,7 @@ install:
 
 build:
 	cd $(ROOT) && npm run build-ts
+	cd $(ROOT) && npm run build-web
 
 run-web:
 	cd $(ROOT) && npm run web
