@@ -8,6 +8,7 @@ cache:
     - ~/.npm
     - .jest
 before_script:
+  # - cd react-native-multi-platform
   - make install
   - make build
 script:
@@ -18,7 +19,10 @@ jobs:
       node_js: lts/*
       script:
         - make publish-expo
-env:
-  global:
-  - secure: NiLVeZ237mDQDABaeyzHPJXF0fTpqoFtBWk0hqdMR/sU0tO2b4198uO7ubdDsCi4Ka/t5jpsNRcX0L2XRI1rPcTJRzZACHFGu5vSwiKEWQ0bHxjCdTfhEnIbtwBdXxav5oWQMC+qw8RvcSyCUuhg/lMnq6+1uwLohqSvdw+7Go0rzrPJGxJwlMz5pksPffmHz7Ezm7V4kJNHBHTqC2m14LN0p2yZmrvqftVfe7W8/5oxiNkwwwM7lEqz1d7ixdb+wK9BdtX8nBEiulnNjCd2ojmUcQkEiEhkrDN4IO+GWJ6WdBMFv9IbJPO2+NsxoWgdjcHCnEkIv37DX0UOuyBYV2YGFQh7RVJm0CS3G531RhzZGABpWLfLCE9LFdXQd8gkdK6+r8ITwPITngoVYgSSMbaIKbVzrNA1FXQuT/Vih8sYMvFeQw8sfW2nLBgBc9/W8ZQeS7LBXJAbUA4En3z1fh7+nE/OdeBJAaV2RfwUiVkjBhViUWgLGoBHb+mal04SmXYmOa/RuiX0QS9Qjs7vQfhb7jEpL5HCbkajvFI31BjefKI36r5Rq8C/gEAH3wRoeO+exWpK4zuUD6WGoCTwWPp0R4C6ugoGOgr+e1SeUugm40mr/xj7Nw1ISm+hHmU0ZHNfS7mUZ/VQbpsJLGzaSHk442BpnWBWD0YImcr86wQ=
-  - secure: mu+Au1i18/IHmpxLLoDCtkYazjaOe9PvEDxZJYKpVbLZo4vIxUMcpjESmwPcBNYjlauZRoWDNNxI8ExCBTc9f+ytFFPubj+me3uBbvqcs1SXQRJQ0DWE5etM35JVoE4LBtBpsVIYvJsu8H0Fn9CAxb3DAh6UueMTtiOpVESmmFX+uw9CxVlPKjAyVFfY+uXQWhi1EEOc1y9YhV7MBf7sRQtiIzirrb+GbFhhJmQ4AwFqMj6jZxBIZaTdXkKj/Khu5BClGbhkWFly5SKmgEjgnJzkiCQp5eq2xYcIpzkHnniLNfsWOr3Km9avsQL8Be1cqSbSnnKU5i9vdslTAdUf8eHe2AvqcolbReas4grgHK3MRH2F2oBmgTEvDGGP2m/Tt8O96+1SqlaxRot2NpM9A1Q+oRr1mE3EJdSy2SYFPt80QXhZhdmJHrVx3RjWfLWkvoEOMmnv6szvH3BGT3mLLkKjb05NiVqYHp02Ey/dMW41PCK8v15a2G8lt6G8g34t48s5RQa83qXSu5rPwWuOZohSIKr5EOgVMgJ26BOHx5FdvWd6yqUEbqlB2obnBc6kVnsHpZjy9d8oPU/2KMQ3bKs4SCXhO1+mbHEFrk4b7IziQ//l6EhjiMknK6H5Y0422DvitesG3wFbmQTAREVKKJAMbu9dTFWJCr56Sidm4gE=
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: react-native-multi-platform/build
+  on:
+    branch: feature/#3-gh-pages

@@ -2,6 +2,7 @@
     "name": "react-native-web-starter",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://vikash-kothary.github.io/generator-react-native-multi-platform/",
     "dependencies": {
         "expo": "^27.0.0",
         "react": "16.3.1",
@@ -24,7 +25,8 @@
         "ios": "react-native-scripts ios",
         "test-native": "node node_modules/jest/bin/jest.js --watch",
         "test": "yarn run test-web && yarn run test-native",
-        "watch": "tsc -w"
+        "watch": "tsc -w",
+        "deploy-web": "gh-pages -d build"
     },
     "jest": {
         "preset": "jest-expo"
@@ -35,11 +37,12 @@
         "@types/react": "^16.3.16",
         "@types/react-native": "^0.55.17",
         "@types/react-test-renderer": "^16.0.1",
+        "babel-plugin-react-native-web": "^0.8.2",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-transform-react-jsx-source": "^6.22.0",
         "babel-preset-expo": "^4.0.0",
-        "babel-plugin-react-native-web": "^0.8.2",
         "flow-bin": "^0.66.0",
+        "gh-pages": "^2.0.1",
         "jest-expo": "^27.0.0",
         "react-art": "16.3.1",
         "react-native-scripts": "^1.14.1",

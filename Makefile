@@ -22,3 +22,8 @@ publish-expo:
 	cd $(ROOT) && npm ci
 	cd $(ROOT) && npx expo login -u $(EXPO_USERNAME) -p $(EXPO_PASSWORD)
 	cd $(ROOT) && npx expo publish --non-interactive
+
+publish-github:
+	cd $(ROOT) && npm run build-ts
+	cd $(ROOT) && npm run build-web
+	cd $(ROOT) && npm run deploy-web
