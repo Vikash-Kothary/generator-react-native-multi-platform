@@ -7,6 +7,9 @@ install:
 build:
 	cd $(ROOT) && npm run build-ts
 
+run-web:
+	cd $(ROOT) && npm run web
+
 run-android:
 	cd $(ROOT) && npm run android
 
