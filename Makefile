@@ -6,6 +6,8 @@ install:
 
 build:
 	cd $(ROOT) && npm run build-ts
+	# Fix warning when building production code
+	cd $(ROOT) && sed -i -e 1d ./src/App.js
 	cd $(ROOT) && npm run build-web
 
 run-web:
